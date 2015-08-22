@@ -210,7 +210,7 @@ public class MediaServer extends Device
 	// HttpRequestListner (Overridded)
 	////////////////////////////////////////////////
 	
-	public void httpRequestRecieved(HTTPRequest httpReq)
+	public void httpRequestReceived(HTTPRequest httpReq)
 	{
 		String uri = httpReq.getURI();
 		Debug.message("uri = " + uri);
@@ -220,7 +220,7 @@ public class MediaServer extends Device
 			return;
 		}
 			 
-		super.httpRequestRecieved(httpReq);
+		super.httpRequestReceived(httpReq);
 	}
 	
 	////////////////////////////////////////////////

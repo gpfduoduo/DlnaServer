@@ -840,7 +840,8 @@ public class ContentDirectory extends ThreadCore implements ActionListener, Quer
 
 	public boolean actionControlReceived(Action action)
 	{
-		//action.print();
+		if(Debug.isOn())
+			action.print();
 		
 		String actionName = action.getName();
 		
@@ -885,6 +886,9 @@ public class ContentDirectory extends ThreadCore implements ActionListener, Quer
 
 	private boolean browseActionReceived(BrowseAction action)
 	{
+		if(Debug.isOn())
+			Debug.message("browseActionReceived");
+
 		if (action.isMetadata() == true)
 			return browseMetadataActionReceived(action);
 		if (action.isDirectChildren() == true)

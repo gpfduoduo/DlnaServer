@@ -32,7 +32,7 @@
 *		            is notified.
 *		- Error :  the other xml nodes of the message are ignored
 *		- Fix : add two methods to the NotifyRequest for extracting the property array
-*                and modify the httpRequestRecieved method in ControlPoint
+*                and modify the httpRequestReceived method in ControlPoint
 *	
 ******************************************************************/
 

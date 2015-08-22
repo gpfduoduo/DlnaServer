@@ -24,7 +24,7 @@
  *	09/02/03
  *		- Giordano Sassaroli <sassarol@cefriel.it>
  *		- Problem : bad request response sent even with successful subscriptions
- *		- Error : a return statement is missing in the httpRequestRecieved method
+ *		- Error : a return statement is missing in the httpRequestReceived method
  *	10/21/03
  *		- Updated a udn field by a original uuid.
  *	10/22/03
@@ -86,7 +86,7 @@
  *		- Thanks for Stefano Lenzi <kismet-sl@users.sourceforge.net>
  *		- Fixed a bug of getParentDevice() to return the parent device normally.
  *	02/21/06
- *		- Changed httpRequestRecieved() not to ignore HEAD requests.
+ *		- Changed httpRequestReceived() not to ignore HEAD requests.
  *	04/12/06
  *		- Added setUserData() and getUserData() to set a user original data object.
  *	03/29/08
@@ -1718,7 +1718,7 @@ public class Device implements org.cybergarage.http.HTTPRequestListener,
 		this.getDeviceData().setMulticastIPv6Address(ip);
 	}
 
-	public void httpRequestRecieved(HTTPRequest httpReq) {
+	public void httpRequestReceived(HTTPRequest httpReq) {
 		if (Debug.isOn() == true)
 			httpReq.print();
 
@@ -2123,7 +2123,7 @@ public class Device implements org.cybergarage.http.HTTPRequestListener,
 		stop(true);
 
 		// //////////////////////////////////////
-		// HTTP Server
+		// HTTP Server 用于DLNA中的Device获取Soap消息
 		// //////////////////////////////////////
 
 		int retryCnt = 0;

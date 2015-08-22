@@ -17,5 +17,5 @@ package org.cybergarage.http;
 
 public interface HTTPRequestListener
 {
-	public void httpRequestRecieved(HTTPRequest httpReq);
+	public void httpRequestReceived(HTTPRequest httpReq);
 }

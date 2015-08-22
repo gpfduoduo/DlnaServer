@@ -29,6 +29,7 @@ public class UPnP
 
 	public final static String OBJECT_ITEM_IMAGEITEM_PHOTO = "object.item.imageItem.photo";
 	public final static String OBJECT_ITEM_VIDEOITEM_MOVIE = "object.item.videoItem.movie";
+	public final static String OBJECT_ITEM_AUDIOITEM_AUDIO = "object.item.audioItem.musicTrack";
 	
 }
 

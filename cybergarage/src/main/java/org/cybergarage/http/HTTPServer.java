@@ -209,7 +209,7 @@ public class HTTPServer implements Runnable
 		int listenerSize = httpRequestListenerList.size();
 		for (int n=0; n<listenerSize; n++) {
 			HTTPRequestListener listener = (HTTPRequestListener)httpRequestListenerList.get(n);
-			listener.httpRequestRecieved(httpReq);
+			listener.httpRequestReceived(httpReq);
 		}
 	}		
 	
