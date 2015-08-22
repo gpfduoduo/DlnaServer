@@ -3,6 +3,7 @@ package com.guo.duoduo.dlnaserver;
 
 import java.net.URLEncoder;
 
+import org.cybergarage.net.HostInterface;
 import org.cybergarage.upnp.std.av.server.MediaServer;
 import org.cybergarage.upnp.std.av.server.UPnP;
 import org.cybergarage.upnp.std.av.server.object.container.ContainerNode;
@@ -22,7 +23,6 @@ public class Dlna_MediaServer
     public final String AUDIO_TITLE = "音频";
     public final String MIME_AUDIO = "audio/*";
 
-    private static final String localIp = "192.168.0.143";
     public final static int port = 8192;
     private MediaServer mediaServer = null;
     private boolean isStop = false;
@@ -82,7 +82,7 @@ public class Dlna_MediaServer
                 item.setRestricted(0);
                 item.setParentID(AUDIO_ID);
                 item.setUPnPClass(UPnP.OBJECT_ITEM_AUDIOITEM_AUDIO);
-                String url = "http://" + localIp + ":" + port + "/"
+                String url = "http://" + HostInterface.getIPv4Address() + ":" + port + "/"
                     + URLEncoder.encode(id);
                 String protocolInfo = "http-get:" + "*:" + MIME_AUDIO + ":" + "*";
                 AttributeList attrList = new AttributeList();
